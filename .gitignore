@@ -1,0 +1,6 @@
+versions/
+current
+*.deb
+*.log
+*.part
+.env*

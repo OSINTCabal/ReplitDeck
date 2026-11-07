@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=ReplitDeck
+GenericName=Replit
+Comment=Replit desktop app for Fedora and Debian Linux
+Exec=@BIN@ %U
+TryExec=@BIN@
+Icon=replitdeck
+Terminal=false
+StartupNotify=true
+StartupWMClass=replit
+Categories=Development;
+MimeType=x-scheme-handler/replit;
+Keywords=replit;code;ide;ai;agent;

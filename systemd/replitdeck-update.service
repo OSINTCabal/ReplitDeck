@@ -1,0 +1,7 @@
+[Unit]
+Description=ReplitDeck weekly update (check+apply)
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/opt/replitdeck/current/libexec/update.sh --timer

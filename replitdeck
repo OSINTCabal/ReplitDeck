@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# ReplitDeck launcher (Wayland auto via ozone hint; X11 fallback). chrome-sandbox is not setuid:
+# Chromium uses unprivileged user namespaces (enabled on Fedora by default).
+ROOT="${REPLITDECK_ROOT:-$HOME/.local/opt/replitdeck}"
+export CHROME_DESKTOP=replitdeck.desktop
+EXTRA=()
+[ -n "${WAYLAND_DISPLAY:-}" ] && EXTRA+=(--enable-wayland-ime --wayland-text-input-version=3)
+exec "$ROOT/current/replitdeck" --ozone-platform-hint=auto --class=replitdeck --name=replitdeck "${EXTRA[@]}" "$@"
